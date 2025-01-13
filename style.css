@@ -1,0 +1,186 @@
+:root {
+    --primary-color: #333;         /* Default icon color */
+    --secondary-color: #f4f4f9;   /* Background color */
+    --hover-color: #0073e6;       /* Hover color for all icons (blue) */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+header {
+    text-align: center;
+    padding: 2rem;
+    background: var(--primary-color);
+    color: white;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: flex-start; /* Align items to the left */
+    align-items: center; /* Vertically align items */
+    background-color: #444;
+    color: white;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    gap: 1rem; /* Adds space between the name and links */
+}
+
+.nav-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+section {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: var(--primary-color);
+    color: white;
+    margin-top: 2rem;
+}
+
+/* Contact Icons */
+.contact-icon {
+    margin: 0 10px;
+    color: var(--primary-color); /* Default color */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth color change */
+}
+
+.contact-icon:hover {
+    color: var(--hover-color); /* All icons turn blue on hover */
+}
+
+
+/* General Flexbox Layout */
+.flex-container {
+    display: flex;
+    gap: 2rem;
+    align-items: center; /* Vertically center both columns */
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Left Column (Picture, Name, and Contact Icons) */
+.left-column {
+    text-align: center;
+    flex: 1; /* Takes equal space in the flexbox */
+}
+
+.profile-picture {
+    width: 250px;
+    border-radius: 50%;
+}
+
+/* Name Below the Portrait */
+.portrait-name {
+    margin-top: 0.5rem; /* Space between the portrait and the name */
+    margin-bottom: 0; /* Remove space below the name */
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.portrait-title {
+    margin-top: 0; /* Remove space above the title */
+    font-size: 1rem;
+    font-style: italic;
+    color: #555;
+    margin-bottom: 1rem; /* Keep space below the title for the icons */
+}
+
+/* Contact Icons Below the Picture */
+.contact-icons {
+    margin-top: 0.5rem; /* Adds space between the name and the icons */
+}
+
+.contact-icon {
+    margin: 0 5px;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-icon:hover {
+    color: #0073e6; /* Blue on hover */
+}
+
+/* Right Column (About Me Text) */
+.right-column {
+    flex: 1.85; /* Takes twice the space of the left column */
+    padding: 0; 
+}
+
+.right-column h2 {
+    margin-bottom: 0.5rem; /* Reduce space below the title */
+}
+
+/* Paragraph in About Me */
+.right-column p {
+    margin-bottom: 1rem; /* Reduce space below the paragraph */
+}
+
+/* Degrees Subsection Title */
+.right-column h3 {
+    margin-top: 1rem; /* Reduce space above the title */
+    margin-bottom: 0.5rem; /* Reduce space below the title */
+}
+
+/* Degrees List */
+.degrees-list {
+    margin: 0.5rem 0 0 1.5rem; /* Reduce space above and indent */
+    padding: 0; /* Remove extra padding */
+}
+
+.degrees-list li {
+    margin-bottom: 0.3rem; /* Reduce space between list items */
+}
+
+/* Academic Bio Section */
+#bio {
+    max-width: 800px;
+    text-align: justify;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: white;
+    margin-top: 2rem;
+}
+
+
