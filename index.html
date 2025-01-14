@@ -16,6 +16,7 @@
         <a href="index.html">About</a>
         <a href="personal.html">Personal</a>
         <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
     </nav>
 
     <!-- About Section -->
@@ -76,7 +77,28 @@
     </section>
 
     <footer>
-        <p>&copy; 2025 Lyle Regenwetter. All rights reserved.</p>
+        <p>&copy; <span id="copyright-year"></span> Lyle Regenwetter. All rights reserved.</p>
+        <p>Last Updated: <span id="last-updated"></span></p>
     </footer>
+    
+    <script>
+        // Automatically highlight the active page
+        document.querySelectorAll("nav a").forEach(link => {
+            if (link.href === window.location.href) {
+                link.classList.add("active");
+            }
+        });
+    
+        // Update the copyright year
+        document.getElementById("copyright-year").textContent = new Date().getFullYear();
+    
+        // Update the last updated date
+        const lastModified = new Date(document.lastModified);
+        document.getElementById("last-updated").textContent = lastModified.toLocaleDateString("en-US", {
+            year: "numeric",
+            month: "long",
+            day: "numeric"
+        });
+    </script>
 </body>
 </html>
