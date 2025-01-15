@@ -4,7 +4,6 @@
     --highlight-color: #9c2e2e;
     --hover-color: #9c2e2e;       /* Hover color */
 }
-
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
@@ -35,12 +34,7 @@ nav {
     padding: 0.5rem 1rem;
     gap: 1rem;
 }
-
-.nav-name {
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-
+/* General link styles */
 nav a {
     color: white;
     text-decoration: none;
@@ -49,12 +43,37 @@ nav a {
     border-radius: 5px;
 }
 
+/* Hover effect for nav links (except nav-name) */
 nav a:hover {
     text-decoration: underline;
 }
 
+/* Active link styling for other links (not nav-name) */
 nav a.active {
-    background-color: var(--hover-color);
+    background-color: var(--hover-color); /* Highlight background for active link */
+    color: white; /* Keep the text white */
+    text-decoration: none; /* No underline for active links */
+}
+
+/* Specific styling for nav-name */
+.nav-name {
+    font-size: 1.2rem; /* Slightly larger font for emphasis */
+    font-weight: bold;
+    color: white; /* Always white */
+    text-decoration: none; /* No underline */
+    margin-right: 1rem; /* Spacing from other links */
+}
+
+/* Ensure nav-name does not get active styles */
+.nav-name.active {
+    background-color: transparent; /* No background highlight */
+    color: white; /* Ensure the text stays white */
+    text-decoration: none; /* No underline */
+}
+
+.nav-name:hover {
+    text-decoration: none; /* No underline on hover */
+    color: white; /* Keep the color consistent */
 }
 
 /* Footer */
@@ -66,7 +85,6 @@ footer {
     margin-top: 2rem;
     font-size: 0.9rem; /* Slightly smaller font for subtle styling */
 }
-
 
 /* Flexbox Layout */
 .flex-container {
@@ -144,7 +162,30 @@ footer {
     margin-bottom: 0.3rem;
 }
 
-/* Research Papers */
+/* Mobile Layout (Stack Columns) */
+@media screen and (max-width: 768px) {
+    .flex-container {
+        display: block; /* Stack elements vertically */
+        padding: 1rem;
+    }
+
+    .left-column, .right-column {
+        flex: unset; /* Remove flex properties */
+        text-align: center; /* Center content on mobile */
+    }
+
+    .right-column {
+        margin-top: 2rem; /* Add spacing between left and right columns */
+    }
+
+    .profile-picture {
+        width: 200px; /* Adjust profile picture size for smaller screens */
+    }
+}
+
+/* General Styling for Publications Page */
+
+/* Year Groups */
 .year-group {
     margin-bottom: 3rem; /* Space between year groups */
 }
@@ -152,29 +193,37 @@ footer {
 .year-title {
     font-size: 1.8rem;
     font-weight: bold;
-    color: var(--primary-color);
+    color: var(--primary-color); /* Use primary color variable for consistency */
     margin-bottom: 1rem;
-    border-bottom: 2px solid #ddd; /* Optional underline */
+    border-bottom: 2px solid #ddd; /* Optional underline for separation */
     padding-bottom: 0.5rem;
 }
 
-.research-paper h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-    color: var(--highlight-color);
+/* Research Paper Entries */
+.research-paper {
+    margin-bottom: 2rem; /* Space between papers */
 }
 
+/* Research Paper Title */
+.research-paper h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: var(--highlight-color); /* Highlight color for titles */
+}
+
+/* Research Paper Metadata (Authors, Venue, Date) */
 .research-paper p {
     margin: 0.5rem 0;
     font-size: 1rem;
-    color: #555;
+    color: #555; /* Subtle text color for readability */
     line-height: 1.6;
 }
 
+/* Links in Research Papers */
 .paper-links {
-    margin-top: 1rem;
+    margin-top: 1rem; /* Space above links */
 }
-
 
 .research-paper .paper-links a {
     display: inline-block;
@@ -186,6 +235,83 @@ footer {
 }
 
 .research-paper .paper-links a:hover {
-    color: var(--hover-color); /* Change to hover color */
+    color: var(--hover-color); /* Use hover color variable for hover effects */
     text-decoration: underline; /* Optional underline on hover */
+}
+
+/* Publications Toggle */
+.publications-toggle {
+    display: flex;
+    justify-content: flex-end; /* Align to the right side of the container */
+    align-items: center; /* Vertically align text and switch */
+    gap: 0.5rem; /* Space between "Select Publications", switch, and "All Publications" */
+    margin: 2rem auto; /* Center horizontally and add vertical spacing */
+    max-width: 950px; /* Match the width of publication boxes */
+    font-size: 1rem; /* Font size for text */
+}
+
+
+
+/* Toggle Text (Select Publications, All Publications) */
+.publications-toggle .toggle-text {
+    color: var(--primary-color); /* Use primary theme color */
+    font-weight: bold; /* Make text bold */
+}
+
+/* Toggle Switch Container */
+.publications-toggle .toggle-label {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    cursor: pointer;
+}
+
+/* Hidden Checkbox */
+.publications-toggle .toggle-label input {
+    display: none; /* Hide the native checkbox */
+}
+
+/* Toggle Slider */
+.publications-toggle .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc; /* Default slider background color */
+    border-radius: 30px;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Toggle Circle */
+.publications-toggle .slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+/* Active State: Use Highlight Color */
+.publications-toggle .toggle-label input:checked + .slider {
+    background-color: var(--highlight-color); /* Highlight color for active state */
+}
+
+.publications-toggle .toggle-label input:checked + .slider:before {
+    transform: translateX(30px); /* Move toggle circle to the right */
+}
+
+/* Hidden Papers */
+.research-paper.hidden {
+    display: none;
+}
+
+/* Hidden Year Groups */
+.year-group[style="display: none;"] {
+    display: none; /* Ensure the section is hidden entirely */
 }

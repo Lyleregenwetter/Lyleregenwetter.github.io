@@ -12,17 +12,26 @@
 <body>
     <!-- Navigation Bar -->
     <nav>
-        <span class="nav-name">Lyle Regenwetter</span>
+        <a href="index.html" class="nav-name">Lyle Regenwetter</a>
         <a href="index.html">About</a>
         <a href="personal.html">Personal</a>
         <a href="research.html">Research</a>
         <a href="publications.html">Publications</a>
     </nav>
 
+    <!-- Toggle Switch -->
+    <div class="publications-toggle">
+        <span class="toggle-text">Select Publications</span>
+        <label class="toggle-label">
+            <input type="checkbox" id="toggle-switch" checked>
+            <span class="slider"></span>
+        </label>
+        <span class="toggle-text">All Publications</span>
+    </div>    
 
     <section class="year-group">
         <h2 class="year-title">2025</h2>
-        <div class="research-paper">
+        <div class="research-paper" data-tag="select">
             <h3 class="paper-title">MCD: A Model-Agnostic Counterfactual Search Method for Multi-Modal Design Modifications</h3>
             <p class="paper-authors">Authors: <strong>Regenwetter, L</strong>; Abu Obaideh, Y; Ahmed, F</p>
             <p class="paper-date">Published: February 2025; <strong>Journal of Mechanical Design</strong></p>
@@ -36,7 +45,7 @@
     
     <section class="year-group">
         <h2 class="year-title">2024</h2>
-        <div class="research-paper">
+        <div class="research-paper" data-tag="select">
             <h3 class="paper-title">Constraining Generative Models for Engineering Design with Negative Data</h3>
             <p class="paper-authors">Authors: <strong>Regenwetter, L</strong>; Giannone, G; Srivastava, A; Gutfreund, D; Ahmed, F</p>
             <p class="paper-date">Published: December 2024; <strong>Transactions on Machine Learning Research (TMLR)</strong></p>
@@ -46,7 +55,7 @@
                 <a href="https://decode.mit.edu/projects/ndgms/" target="_blank" class="project-link">Project Page</a>
             </div>
         </div>
-        <div class="research-paper">
+        <div class="research-paper" data-tag="all">
             <h3 class="paper-title">Towards Domain-Adaptive Resolution-Free 3D Topology Optimization with Neural Implicit Fields</h3>
             <p class="paper-authors">Authors: Nobari, AH; <strong>Regenwetter, L</strong>; Ahmed, F</p>
             <p class="paper-date">Published: August 2024; <strong>International Design Engineering Technical Conferences</strong></p>
@@ -59,7 +68,7 @@
 
     <section class="year-group">
         <h2 class="year-title">2023</h2>
-        <div class="research-paper">
+        <div class="research-paper" data-tag="select">
             <h3 class="paper-title">Beyond Statistical Similarity: Rethinking Metrics for Deep Generative Models in Eng. Design</h3>
             <p class="paper-authors">Authors: <strong>Regenwetter, L</strong>; Srivastava, A; Gutfreund, D; Ahmed, F</p>
             <p class="paper-details">Published: October 2023; <strong>Computer Aided Design</strong></p>
@@ -70,7 +79,16 @@
                 <a href="https://meche.mit.edu/news-media/excel-engineering-design-generative-ai-must-learn-innovate-study-finds" target="_blank" class="paper-link">News Article</a>
             </div>
         </div>
-        <div class="research-paper">
+        <div class="research-paper" data-tag="all">
+            <h3 class="paper-title">Counterfactuals for Design: A Model-Agnostic Method for Design Recommendations </h3>
+            <p class="paper-authors">Authors: <strong>Regenwetter, L</strong>; Abu Obaideh, Y; Ahmed, F</p>
+            <p class="paper-date">Published: Aug. 2023; <strong>Journal of Mechanical Design</strong></p>
+            <div class="paper-links">
+                <a href="https://asmedigitalcollection.asme.org/IDETC-CIE/proceedings/IDETC-CIE2023/87301/V03AT03A008/1170462" target="_blank" class="project-link">Project Page</a>
+                <a href="https://decode.mit.edu/projects/counterfactuals/" target="_blank" class="project-link">Project Page</a>
+            </div>
+        </div>
+        <div class="research-paper" data-tag="select">
             <h3 class="paper-title">FRAMED: An AutoML Approach for Structural Performance Prediction of Bicycle Frames</h3>
             <p class="paper-authors">Authors: <strong>Regenwetter, L</strong>; Weaver, C; Ahmed, F</p>
             <p class="paper-details">Published: March 2023; <strong>Computer Aided Design</strong></p>
@@ -84,7 +102,7 @@
     
     <section class="year-group">
         <h2 class="year-title">2022</h2>
-        <div class="research-paper">
+        <div class="research-paper" data-tag="select">
             <h3 class="paper-title">Design Target Achievement Index: A Differentiable Metric to Enhance Deep Generative Models in Multi-Objective Inverse Design</h3>
             <p class="paper-authors">Authors: <strong>Regenwetter, L</strong>; Ahmed, F</p>
             <p class="paper-details">Published: August 2022; <strong>International Design Engineering Technical Conferences</strong></p>
@@ -94,30 +112,39 @@
                 <a href="https://decode.mit.edu/projects/dtai/" target="_blank" class="project-link">Project Page</a>
             </div>
         </div>
-        <div class="research-paper">
+        <div class="research-paper" data-tag="select">
             <h3 class="paper-title">Deep Generative Models in Engineering Design: A Review</h3>
             <p class="paper-authors">Authors: <strong>Regenwetter, L</strong>; Nobari, AH; Ahmed, F</p>
-            <p class="paper-dtails">Published: January 2022; <strong>Journal of Mechanical Design</strong></p>
+            <p class="paper-dtails">Published: July 2022; <strong>Journal of Mechanical Design</strong></p>
             <div class="paper-links">
                 <a href="papers/2022_regenwetter_review.pdf" target="_blank" class="paper-link">PDF</a>
                 <a href="https://asmedigitalcollection.asme.org/mechanicaldesign/article/144/7/071704/1136676/Deep-Generative-Models-in-Engineering-Design-A" target="_blank" class="project-link">Paper</a>
             </div>
         </div>
-    </section>
-    
-    <section class="year-group">
-        <h2 class="year-title">2021</h2>
-        <div class="research-paper">
+        <div class="research-paper" data-tag="select">
             <h3 class="paper-title">BIKED: A Dataset for Computational Bicycle Design with Machine Learning Benchmarks</h3>
             <p class="paper-authors">Authors: <strong>Regenwetter, L</strong>; Curry, B; Ahmed, F</p>
-            <p class="paper-date">Published: September 2021; <strong>Journal of Mechanical Design</strong></p>
+            <p class="paper-date">Published: March 2022; <strong>Journal of Mechanical Design</strong></p>
             <div class="paper-links">
                 <a href="papers/2021_regenwetter_biked.pdf" target="_blank" class="paper-link">PDF</a>
                 <a href="https://asmedigitalcollection.asme.org/mechanicaldesign/article/144/3/031706/1120717/BIKED-A-Dataset-for-Computational-Bicycle-Design" target="_blank" class="project-link">Paper</a>
                 <a href="https://decode.mit.edu/projects/biked/" target="_blank" class="project-link">Project Page</a>
             </div>
         </div>
-        <div class="research-paper">
+    </section>
+    
+    <section class="year-group">
+        <h2 class="year-title">2021</h2>
+        <div class="research-paper" data-tag="all">
+            <h3 class="paper-title">BIKED: A Dataset and Machine Learning Benchmarks for Data-Driven Bicycle Design</h3>
+            <p class="paper-authors">Authors: <strong>Regenwetter, L</strong>; Curry, B; Ahmed, F</p>
+            <p class="paper-date">Published: August 2021; <strong>International Design Engineering Technical Conferences</strong></p>
+            <div class="paper-links">
+                <a href="https://asmedigitalcollection.asme.org/IDETC-CIE/proceedings/IDETC-CIE2021/85383/V03AT03A019/1128317" target="_blank" class="project-link">Paper</a>
+                <a href="https://decode.mit.edu/projects/biked/" target="_blank" class="project-link">Project Page</a>
+            </div>
+        </div>
+        <div class="research-paper" data-tag="all">
             <h3 class="paper-title">Low Porosity, High Areal-Capacity Prussian Blue Analogue Electrodes Enhance Salt Removal and Thermodynamic Efficiency in Symmetric Faradaic Deionization with Automated Fluid Control</h3>
             <p class="paper-authors">Authors: Reale, ER; <strong>Regenwetter, L</strong>; Agrawal, A; Dardon, B; Dicola, B; Sanagala, S; Smith, KC</p>
             <p class="paper-date">Published: August 2021; <strong>Water Research X</strong></p>
@@ -150,6 +177,38 @@
             month: "long",
             day: "numeric"
         });
+    </script>
+    <script>
+        const toggleSwitch = document.getElementById("toggle-switch");
+        const papers = document.querySelectorAll(".research-paper");
+
+        // Function to update visibility based on the toggle state
+        function updateVisibility() {
+            papers.forEach((paper) => {
+                const tag = paper.getAttribute("data-tag");
+                if (toggleSwitch.checked) {
+                    paper.classList.remove("hidden"); // Show all publications
+                } else {
+                    if (tag === "all") {
+                        paper.classList.add("hidden"); // Hide "all" publications
+                    } else {
+                        paper.classList.remove("hidden"); // Show "select" publications
+                    }
+                }
+            });
+
+            // Hide empty year groups
+            document.querySelectorAll(".year-group").forEach((yearGroup) => {
+                const visiblePapers = yearGroup.querySelectorAll(".research-paper:not(.hidden)");
+                yearGroup.style.display = visiblePapers.length > 0 ? "block" : "none";
+            });
+        }
+
+        // Initialize visibility on page load
+        updateVisibility();
+
+        // Add event listener to update visibility on toggle change
+        toggleSwitch.addEventListener("change", updateVisibility);
     </script>
 </body>
 </html>
