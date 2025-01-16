@@ -190,53 +190,86 @@ footer {
     margin-bottom: 3rem; /* Space between year groups */
 }
 
+/* Year Group Styling */
+.year-group {
+    margin-bottom: 3rem; /* Space between year groups */
+}
+
 .year-title {
+    margin-top: 0;
     font-size: 1.8rem;
     font-weight: bold;
-    color: var(--primary-color); /* Use primary color variable for consistency */
+    color: var(--primary-color);
     margin-bottom: 1rem;
-    border-bottom: 2px solid #ddd; /* Optional underline for separation */
+    border-bottom: 2px solid #ddd; /* Optional underline */
     padding-bottom: 0.5rem;
 }
 
-/* Research Paper Entries */
+/* General Research Paper Styles */
 .research-paper {
-    margin-bottom: 2rem; /* Space between papers */
+    display: flex; /* Align thumbnail and text side by side */
+    gap: 1rem; /* Space between thumbnail and text */
+    align-items: center; /* Vertically center both columns */
 }
 
-/* Research Paper Title */
-.research-paper h3 {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    color: var(--highlight-color); /* Highlight color for titles */
+/* Add margin-bottom to all but the last research paper */
+.research-paper:not(:last-child) {
+    margin-bottom: 2rem; /* Space between papers, excluding the last one */
 }
 
-/* Research Paper Metadata (Authors, Venue, Date) */
-.research-paper p {
-    margin: 0.5rem 0;
-    font-size: 1rem;
-    color: #555; /* Subtle text color for readability */
-    line-height: 1.6;
+
+/* Thumbnail Wrapper */
+.thumbnail {
+    width: 130px; /* Fixed width for the thumbnail */
+    height: auto; /* Allow the height to adjust */
+    display: flex; /* Flexbox for centering */
+    justify-content: center; /* Horizontally center the image */
+    align-items: center; /* Vertically center the image */
+    background-color: #f0f0f0; /* Fallback background color */
+    flex-shrink: 0; /* Prevent shrinking */
+    overflow: hidden; /* Crop content if needed */
 }
 
-/* Links in Research Papers */
-.paper-links {
-    margin-top: 1rem; /* Space above links */
+/* Thumbnail Image */
+.thumbnail img {
+    max-width: 100%; /* Scale the image to fit the width */
+    max-height: 100%; /* Scale the image to fit the height */
+    object-fit: contain; /* Maintain aspect ratio without cropping */
+    display: block; /* Prevent unexpected inline space issues */
+    max-height: 100%; 
 }
 
-.research-paper .paper-links a {
+/* Paper Details */
+.paper-details {
+    flex: 1; /* Allow text to take up remaining space */
+    display: flex;
+    flex-direction: column; /* Stack text vertically */
+    justify-content: flex-start; /* Let text take its natural height */
+}
+
+.paper-title {
+    font-size: 1.05rem;
+    color: var(--highlight-color);
+    margin: 0 0 0rem; /* Space below the title */
+}
+
+.paper-authors, .paper-date {
+    margin: 0.2rem 0;
+    color: #555; /* Subdued color for metadata */
+    font-size: 0.95rem;
+}
+
+.paper-links a {
     display: inline-block;
-    color: #555; /* Default gray color for links */
     margin-right: 1rem;
-    text-decoration: none; /* No underline by default */
+    color: var(--highlight-color);
+    text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s ease; /* Smooth color transition */
+    transition: color 0.3s ease;
 }
 
-.research-paper .paper-links a:hover {
-    color: var(--hover-color); /* Use hover color variable for hover effects */
-    text-decoration: underline; /* Optional underline on hover */
+.paper-links a:hover {
+    color: var(--hover-color); /* Change to hover color */
 }
 
 /* Publications Toggle */
