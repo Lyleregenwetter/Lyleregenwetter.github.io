@@ -267,7 +267,7 @@ footer {
 }
 
 /* Responsive Layout: Stacked for Small Screens */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 539px) {
     .research-paper {
         flex-direction: column; /* Stack thumbnail and text */
         align-items: center; /* Center items horizontally */
@@ -324,7 +324,7 @@ footer {
 }
 
 /* Center the Toggle on Small Screens */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 539px) {
     .publications-toggle {
         justify-content: center; /* Center-align the slider */
         margin-right: 0; /* Remove the right margin on small screens */
@@ -332,7 +332,7 @@ footer {
 }
 
 /* Add Extra Vertical Space Between Papers on Small Screens */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 539px) {
     .research-paper:not(:last-child) {
         margin-top: 0;
         margin-bottom: 5rem; /* Increase vertical spacing for small screens */
