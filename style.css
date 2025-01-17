@@ -266,6 +266,26 @@ footer {
     justify-content: flex-start; /* Let text take its natural height */
 }
 
+/* Responsive Layout: Stacked for Small Screens */
+@media screen and (max-width: 768px) {
+    .research-paper {
+        flex-direction: column; /* Stack thumbnail and text */
+        align-items: center; /* Center items horizontally */
+        text-align: center; /* Center-align text for readability */
+    }
+
+    .thumbnail {
+        width: 100%; /* Thumbnail spans full width */
+        max-width: 250px; /* Cap the maximum width */
+        margin-bottom: 1rem; /* Space below the image */
+    }
+
+    .thumbnail img {
+        width: 100%; /* Image fills the thumbnail's width */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
 .paper-title {
     font-size: 1.05rem;
     color: var(--highlight-color);
@@ -294,15 +314,30 @@ footer {
 /* Publications Toggle */
 .publications-toggle {
     display: flex;
-    justify-content: flex-end; /* Align to the right side of the container */
+    justify-content: flex-end; /* Align to the right side by default */
     align-items: center; /* Vertically align text and switch */
     gap: 0.5rem; /* Space between "Select Publications", switch, and "All Publications" */
     margin: 2rem auto; /* Center horizontally and add vertical spacing */
     max-width: 950px; /* Match the width of publication boxes */
     font-size: 1rem; /* Font size for text */
+    margin-right: 2rem; /* Add margin on the right */
 }
 
+/* Center the Toggle on Small Screens */
+@media screen and (max-width: 768px) {
+    .publications-toggle {
+        justify-content: center; /* Center-align the slider */
+        margin-right: 0; /* Remove the right margin on small screens */
+    }
+}
 
+/* Add Extra Vertical Space Between Papers on Small Screens */
+@media screen and (max-width: 768px) {
+    .research-paper:not(:last-child) {
+        margin-top: 0;
+        margin-bottom: 5rem; /* Increase vertical spacing for small screens */
+    }
+}
 
 /* Toggle Text (Select Publications, All Publications) */
 .publications-toggle .toggle-text {
