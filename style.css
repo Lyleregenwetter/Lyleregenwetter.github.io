@@ -25,23 +25,42 @@ section, .flex-container, #bio {
 }
 
 /* Navigation Bar */
+/* Navigation Bar */
 nav {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    background-color: var(--primary-color);
-    color: white;
-    padding: 0.5rem 1rem;
-    gap: 1rem;
+    width: 100%; /* Make the nav span the full width of the screen */
+    max-width: none; /* Ensure no width constraint */
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap onto new rows */
+    justify-content: flex-start; /* Align items to the left */
+    align-items: center; /* Vertically align items */
+    background-color: var(--primary-color); /* Header background color */
+    color: white; /* Text color */
+    padding: 0.5rem 0.5rem; /* Add padding inside the header */
+    box-sizing: border-box; /* Include padding in width calculation */
+    gap: 0.5rem; /* Add space between items */
 }
-/* General link styles */
+
+/* Navigation Links */
 nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
+    color: white; /* Keep text white */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make the text bold */
+    padding: 0.5rem 0.5rem; /* Add space inside each link */
+    border-radius: 5px; /* Optional: Rounded corners */
+    white-space: nowrap; /* Prevent breaking within words */
 }
+
+nav a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Mobile-Specific Adjustments */
+@media screen and (max-width: 768px) {
+    nav {
+        justify-content: center; /* Center-align items on smaller screens */
+    }
+}
+
 
 /* Hover effect for nav links (except nav-name) */
 nav a:hover {
