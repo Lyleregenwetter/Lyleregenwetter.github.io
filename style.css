@@ -24,7 +24,12 @@ section, .flex-container, #bio {
     text-align: justify;
 }
 
-/* Navigation Bar */
+img { 
+    max-width: 100%; 
+    height: auto; 
+    display: block;
+}
+
 /* Navigation Bar */
 nav {
     width: 100%; /* Make the nav span the full width of the screen */
@@ -59,12 +64,6 @@ nav a:hover {
     nav {
         justify-content: center; /* Center-align items on smaller screens */
     }
-}
-
-
-/* Hover effect for nav links (except nav-name) */
-nav a:hover {
-    text-decoration: underline;
 }
 
 /* Active link styling for other links (not nav-name) */
@@ -205,11 +204,6 @@ footer {
 /* General Styling for Publications Page */
 
 /* Year Groups */
-.year-group {
-    margin-bottom: 3rem; /* Space between year groups */
-}
-
-/* Year Group Styling */
 .year-group {
     margin-bottom: 3rem; /* Space between year groups */
 }
@@ -403,25 +397,37 @@ footer {
     display: none; /* Ensure the section is hidden entirely */
 }
 
+.research-block h2 {
+  margin: 0 0 0.75rem;
+  line-height: 1.25;
+}
+
+/* Give the boxes a touch more breathing room */
 .research-block {
-    margin: 60px auto;
-    max-width: 900px;
-    padding: 0 20px;
+  margin: 60px auto;
+  max-width: 900px;
+  padding: 1.25rem 1.5rem;  /* was 0 20px */
 }
 
+/* Stack text and image vertically */
 .research-content {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+  display: block;        /* instead of flex */
 }
 
+/* Nice spacing + centered images */
 .research-content img {
-    width: 250px;
-    border-radius: 8px;
-    object-fit: cover;
+  display: block;
+  margin: 0.75rem auto 0; /* space above, centered */
+  width: 100%;
+  max-width: 800px;       /* cap desktop width; tweak to taste */
+  height: auto;
+  border-radius: 8px;
 }
 
-.research-content p {
-    flex: 1;
-    line-height: 1.6;
+/* Optional: narrower one-off image */
+.research-content img.narrow-img {
+  max-width: 600px;
+  width: auto;          /* override width:100% from the generic rule */
+  margin-left: auto;
+  margin-right: auto;
 }

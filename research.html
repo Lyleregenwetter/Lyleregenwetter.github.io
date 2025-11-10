@@ -21,51 +21,98 @@
 
     <section class="research-block">
         <h2>Negative Data Generative Models</h2>
-        <div class="research-content"></div>
-            <p>
-                To train Generative AI models, practitioners conventionally show these models many positive examples of what they want the model to generate.  
-                In my research, I've proposed a new paradigm that incorporates negative examples, which are examples of what the model should not generate. 
-                These negative examples are instrumental in teaching generative models constraints, which are essential for many engineering problems, particularly those with safety-critical requirements.
-                Much like humans learn best from a mixture of positive and negative feedback, generative models can train more efficiently and effectively using negative data in addition to positive data. 
-                As a bonus, negative data is often cheaper to generate than positive data, despite often being more information-rich. 
-            </p>
-        </div>
-    </section>
-
-    <section class="research-block">
-        <h2>Generative Optimization</h2>
-        <div class="research-content"></div>
-            <p>
-                While Generative AI has only recently been applied to engineering problems, optimization is a tried-and-true engineering problem solving tool.
-                While optimization excels at precisely finding high-quality solutions that satisfy constraints, Generative AI models excel at inferring problem requirements, bridging solution modalities, handling mixed data modalities, and rapidly generating numerous solutions.
-                In many ways, Optimization and Generative AI are complementary tools, and combining them can lead to powerful problem-solving capabilities. 
-                My research explores ways to integrate Generative AI models into optimization workflows to leverage the strengths of both approaches.
-            </p>
-        </div>
-    </section>
-    
-    <section class="research-block">
-        <h2>Building a GenAI Ecosystem</h2>
-        <div class="research-content"></div>
-            <p>
-                Great breakthroughs in AI are built on great infrastructure, including theory, datasets, evaluation metrics, and benchmarks.
-                To excel in engineering design, researchers need to invest in the GenAI infrastructure that is specific to engineering design.
-                My research expands the GenAI ecosystem with new datasets, evaluation metrics, and benchmarks that are tailored to the unique challenges of engineering design.
-                I have released seven public datasets which have been downloaded hundreds of times and used in 30+ publications. I have also create suites of evaluation metrics and engineering design benchmarks. 
-            </p>
-            <img src="images/bikebench.png" alt="BikeBench Overview">
+        <div class="research-content">
+            <div class="research-text">
+                <p>
+                    To train Generative AI models, practitioners conventionally show these models many positive examples of what they want the model to generate.  
+                    In my research, I've proposed a new paradigm that incorporates negative examples, which are examples of what the model should not generate. 
+                    These negative examples are instrumental in teaching generative models constraints, which are essential for many engineering problems, particularly those with safety-critical requirements.
+                    Much like humans learn best from a mixture of positive and negative feedback, generative models can train more efficiently and effectively using negative data in addition to positive data. 
+                    As a bonus, negative data is often cheaper to generate than positive data, despite often being more information-rich. 
+                </p>
+            </div>
+            <img src="images/ndgm_summary.png" alt="Introduction to Negative Data">
         </div>
     </section>
 
     <section class="research-block">
         <h2>Foundation Models for Engineering Datasets</h2>
-        <div class="research-content"></div>
-            <p>
-                Foundation models for natural language and image synthesis have achieved such widespread success that general-purpose models are now used extensively for domain-specific tasks. 
-                Many engineering domains, which are dominated by tabular data, lack such general-purpose models and are instead powered by individual machine learning models trained for singular tasks. 
-                Developing general-purpose models that can be applied without domain-specific training to a wide variety of engineering tasks would signficiantly accelerate predictive tasks in engineering.
-                I believe synthetic data may be the key to powerful general-purpose models for engineering, and am exploring ways to realize this vision.
-            </p>
+        <div class="research-content">
+            <div class="research-text">
+                <p>
+                    Foundation models for natural language and image synthesis have achieved such widespread success that general-purpose models are now used extensively for domain-specific tasks. 
+                    Many engineering domains, which are dominated by tabular data, lack such general-purpose models and are instead powered by individual machine learning models trained for singular tasks. 
+                    Developing general-purpose models that can be applied without domain-specific training to a wide variety of engineering tasks would signficiantly accelerate predictive tasks in engineering.
+                    I believe synthetic data may be the key to powerful general-purpose models for engineering, and am exploring ways to realize this vision. 
+                    For starters, I have begun to map the space of engineering design data, visualizing how it compares to non-engineering data and state-of-the-art procedurally-generated data.
+                </p>
+            </div>
+            <img src="images/dataset_embedding.png" alt="Dataset Embedding">
+        </div>
+    </section>
+
+        <section class="research-block">
+        <h2>AI-Enhanced Optimization and Counterfactual Search</h2>
+        <div class="research-content">
+            <div class="research-text">
+                <p>
+                    Most real-world designs are not the result of a single one-shot synthesis process. Instead, they emerge from countless iterative modifications. 
+                    Designers often identify changes to previous models or prototypes to achieve new functional goals. In doing so, they implicitly pose counterfactual questions—“What if my design were 10 \% lighter?”—and then attempt to realize these alternatives.
+                </p>
+                <p>
+                    I have introduced Multi-Objective Counterfactuals for Design (MCD), a model-agnostic framework that formalizes such counterfactual reasoning as a design optimization problem. 
+                    MCD seeks a modified design that satisfies the specified objectives while minimizing deviation from the original and maximizing statistical likelihood under a prior of known designs. Compared with classical design optimization, MCD’s additional objectives help it navigate implicit constraints, satisfying them at more than double the rate.
+                </p>
+                <p>
+                    We demonstrate MCD on parametric CAD models of bicycles. A user asks MCD to modify a bicycle design to become more aerodynamic, structurally sound, ergonomic, and lightweight, while also resembling a reference image and matching a text description. 
+                    MCD successfully solves this complex multimodal counterfactual search, returning a modified CAD file that satisfies both quantitative and qualitative goals. Similarity to text and image prompts is computed using multimodal representation learning---constituting the first algorithm to directly optimize a parametric CAD model using text- or image-based objectives.
+                </p>
+            </div>
+            <img src="images/mcd_demo.png" alt="MCD Demo">
+        </div>
+    </section>
+
+    <section class="research-block">
+        <h2>Building a GenAI Ecosystem</h2>
+        <div class="research-content">
+            <div class="research-text">
+                <p>
+                    Great breakthroughs in AI are built on great infrastructure, including theory, datasets, evaluation metrics, and benchmarks.
+                    To excel in engineering design, researchers need to invest in the GenAI infrastructure that is specific to engineering design.
+                    My research expands the GenAI ecosystem with new datasets, evaluation metrics, and benchmarks that are tailored to the unique challenges of engineering design.
+                    I have released seven public datasets which have been downloaded hundreds of times and used in 30+ publications. I have also create suites of evaluation metrics and engineering design benchmarks. 
+                </p>
+            </div>
+            <img src="images/bikebench.png" alt="BikeBench Overview">
+        </div>
+    </section>
+
+    <section class="research-block">
+        <h2>Evaluation Metrics for GenAI in Engineering Design</h2>
+        <div class="research-content">
+            <div class="research-text">
+                <p>
+                    In most AI domains, generative models are evaluated by how closely their outputs match the statistical distribution of their training data. This approach, widely adopted in design applications, overlooks key aspects of the design process—innovation, feasibility, and constraint satisfaction. 
+                    I have challenged this inherited paradigm, showing that statistical similarity alone is an incomplete and sometimes misleading measure of performance for design-oriented GenAI models.
+                    Instead, I curate 29 metrics that capture quality, diversity, novelty, feasibility, and distributional similarity of model-generated designs.
+                </p>
+            </div>
+            <img src="images/metrics.png" alt="Metrics">
+        </div>
+    </section>
+
+    <section class="research-block">
+        <h2>Generative Optimization</h2>
+        <div class="research-content">
+            <div class="research-text">
+                <p>
+                    While Generative AI has only recently been applied to engineering problems, optimization is a tried-and-true engineering problem solving tool.
+                    While optimization excels at precisely finding high-quality solutions that satisfy constraints, Generative AI models excel at inferring problem requirements, bridging solution modalities, handling mixed data modalities, and rapidly generating numerous solutions.
+                    In many ways, Optimization and Generative AI are complementary tools, and combining them can lead to powerful problem-solving capabilities. 
+                    My research explores ways to integrate Generative AI models into optimization workflows to leverage the strengths of both approaches.
+                </p>
+            </div>
+            <img class="narrow-img" src="images/genopt.png" alt="Generative Optimization">
         </div>
     </section>
 
