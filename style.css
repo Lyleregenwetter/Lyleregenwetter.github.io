@@ -402,3 +402,26 @@ footer {
 .year-group[style="display: none;"] {
     display: none; /* Ensure the section is hidden entirely */
 }
+
+.research-block {
+    margin: 60px auto;
+    max-width: 900px;
+    padding: 0 20px;
+}
+
+.research-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.research-content img {
+    width: 250px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.research-content p {
+    flex: 1;
+    line-height: 1.6;
+}
